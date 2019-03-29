@@ -1,3 +1,11 @@
 .btn-container button:last-child {
   margin-left: 5px;
 }
+
+.form-container {
+  padding: 20px;
+  border-width: 2;
+  border: solid #f7f7f9;
+  width: 500px;
+  margin: 0 auto;
+}

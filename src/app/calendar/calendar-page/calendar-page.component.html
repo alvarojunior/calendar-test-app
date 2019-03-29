@@ -1,13 +1,12 @@
-<div class="page-container container-fluid">
-  <div class="page-form-container">
-    <app-calendar-form
-      (onSubmit)="handleSubmit($event)"
-      (onReset)="handleReset()"
-    >
-    </app-calendar-form>
+<div class="page-container container">
+  <app-calendar-form
+    (onSubmit)="handleSubmit($event)"
+    (onReset)="handleReset()"
+  >
+  </app-calendar-form>
+
+  <div class="page-list-container" *ngIf="calendar">
+    <h1>#{{calendar.id}} - {{calendar.title}}</h1>
+    <app-calendar-list [events]="events"></app-calendar-list>
   </div>
-
-  <h1 *ngIf="calendar">#{{calendar.id}} - {{calendar.title}}</h1>
-
-  <app-calendar-list [events]="events"></app-calendar-list>
 </div>
