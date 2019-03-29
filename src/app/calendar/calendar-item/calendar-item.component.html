@@ -1,0 +1,12 @@
+<div class="calendar-item">
+  <div class="calendar-item-header">{{event.title}}</div>
+  <div class="calendar-item-body">
+    <p>
+      <span class="badge badge-primary">Start Date</span> {{event.startDate | date:'short'}}
+    </p>
+    <p>
+      <span class="badge badge-danger">End Date</span> {{event.endDate | date:'short'}}
+    </p>
+    <p>{{event.shortDescription}}</p>
+  </div>
+</div>

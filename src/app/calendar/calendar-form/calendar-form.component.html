@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="handleSubmit()">
+  <div class="form-field">
+    <label for="url">Calendar URL </label>
+    <input type="text" formControlName="url" placeholder="Calendar URL">
+    <form-error-message controlName="url" errorKey="required">URL is required.</form-error-message>
+    <form-error-message controlName="url" errorKey="url">URL is not valid.</form-error-message>
+  </div>
+  <br>
+  <div class="btn-container">
+    <button class="btn btn-primary" [disabled]="!form.valid">Retrieve</button>
+    <button class="btn btn-secondary" type="button" (click)="handleReset()">Reset</button>
+  </div>
+</form>
